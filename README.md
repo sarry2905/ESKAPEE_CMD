@@ -9,14 +9,15 @@ Upon execution, first the tool extracts the sequence from the input file(s), the
 
 ###### Please Note, the tool is designed in Python3.10 hence its recommended it should be run on the same. However, it can run on other Python versions as well depending on the version of packages.
 
+ _The tool has been tested on Windows and linux environments with Python3.10._
 
-### To run the ESKAPEE_CMD classifier tool on your local machine:
+## To run the ESKAPEE_CMD classifier tool on your local machine:
 
 
 1. Clone this repository or download the zipped file and Unzip in a suitable location.
 
 2. Setup a new virtual environment Make sure your python version is 3.10
-	python -m venv venv
+   python -m venv venv
 
 3. Once the virtual environment is created, activate it.
    path/to/directory/ESKAPEE_CMD>.\venv\Scripts\activate
@@ -25,31 +26,27 @@ Upon execution, first the tool extracts the sequence from the input file(s), the
 	path/to/directory/ESKAPEE_CMD> source venv/bin/activate
 
 4. Now, Install the package dependencies using the given requirements.txt file.
-	(venv) path/to/directory/ESKAPEE_CMD> pip install -r requirements.txt
+    (venv) path/to/directory/ESKAPEE_CMD> pip install -r requirements.txt
 
 5. Download the trained models from [here](https://drive.google.com/file/d/1Q0m-gOJU9yyrCy4ad2FBI59mMfqhDvcG/view?usp=sharing). Extract the files, there are total 5 models with .sav extension and move them at the location ./Module/Models/
 
-6. A few sample fastq.gz files are provided with the tool at location ./Sample_Inputs/.
+6. The classifier execution command takes one argument -i or -F.  
+   A few sample fastq.gz files are provided with the tool at location ./Sample_Inputs/.
+        -i for the path to the input gzipped file.
+        -F for the path to the folder containing multiple gzipped files.
 
-7. The classifier execution command takes one argument -i or -F. 
+    1. For a single input gz file.
+                
+             (venv) path/to/directory/ESKAPEE_CMD>python main.py -i path\to\file\fname.gz
+                                
+              For example: (venv) path/to/directory/ESKAPEE_CMD>python main.py -i ./Input/SRR1635675.fastq.gz
+          
+    2. For multiple .gz files stored in a directory.
+   
+            (venv) path/to/directory/ESKAPEE_CMD>python main.py -F path\to\directory\containing\gzfiles
+                  
+            For Example: (venv) E:\ESKAPEE\ESKAPEE Classifier>python main.py -F .\Input
 
-    -i for the path to the input gzipped file.
+7. The output of the classifier will be displayed on the same terminal.
 
-    -F for the path to the folder containing multiple gzipped files
-
-
-       * For a single input gz file.
-
-       (venv) path/to/directory/ESKAPEE_CMD>python main.py -i path\to\file\fname.gz
-
-       For Example: (venv) path/to/directory/ESKAPEE_CMD>python main.py -i ./Input/SRR1635675.fastq.gz
-
-      * For multiple .gz files stored in a directory
-
-       (venv) path/to/directory/ESKAPEE_CMD>python main.py -F path\to\directory\containing\gzfiles
-
-       For Example: (venv) E:\ESKAPEE\ESKAPEE Classifier>python main.py -F .\Input
-
-8. The output of the classifier will be displayed on the same terminal.
-
-9. The same outputs can be found in .csv format at location .\Data\classification\
+8. he same outputs can be found in .csv format at location .\Data\classification\
