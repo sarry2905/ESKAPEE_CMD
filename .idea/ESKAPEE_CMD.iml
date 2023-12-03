@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
-    <orderEntry type="inheritedJdk" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/Data/Features" />
+      <excludeFolder url="file://$MODULE_DIR$/Data/classification" />
+      <excludeFolder url="file://$MODULE_DIR$/Data/sequence" />
+      <excludeFolder url="file://$MODULE_DIR$/Module/Models" />
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.10 (ESKAPEE_CMD) (2)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
