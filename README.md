@@ -28,7 +28,7 @@ Upon execution, first the tool extracts the sequence from the input file(s), the
 4. Now, Install the package dependencies using the given requirements.txt file.
     (venv) path/to/directory/ESKAPEE_CMD> pip install -r requirements.txt
 
-5. Download the trained models from [here](https://drive.google.com/file/d/1Q0m-gOJU9yyrCy4ad2FBI59mMfqhDvcG/view?usp=sharing). Extract the files, there are total 5 models with .sav extension and move them at the location ./Module/Models/
+5. Download the trained models from [here](https://drive.google.com/drive/folders/1TEz80deKo5-i2NoczavPoOD2x-ZgNq9g?role=writer). Extract the files, there are total 5 models with .sav extension and move them at the location ./Module/Models/
 
 6. The classifier execution command takes one argument -i or -F.  
    A few sample fastq.gz files are provided with the tool at location ./Sample_Inputs/.
